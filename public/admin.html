@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="css/home.css" />
+  <style>
+    body {
+      background-color: #f4f1eb;
+      font-family: 'Georgia', serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .admin-dashboard {
+      padding: 80px 20px 40px;
+      max-width: 900px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .admin-dashboard h1 {
+      font-size: 36px;
+      padding: 80px 20px 40px;
+      margin-bottom: 30px;
+      color: #2d3a32;
+      border-bottom: 2px solid #9bb3ac;
+      display: inline-block;
+      padding-bottom: 10px;
+    }
+
+    #logout-btn {
+      background-color: #406661;
+      color: #f9f5ef;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 16px;
+      font-family: 'Georgia', serif;
+      margin-bottom: 40px;
+      transition: background 0.3s ease;
+    }
+
+    #logout-btn:hover {
+      background-color: #2f4e4a;
+    }
+
+    #blog-list {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+
+    .blog-card {
+      border: 2px solid #b7cec5;
+      background-color: #f7f5f0;
+      padding: 24px;
+      border-radius: 10px;
+      box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.05);
+      text-align: left;
+    }
+
+    .blog-card h3 {
+      font-size: 24px;
+      color: #33443f;
+      margin-bottom: 10px;
+    }
+
+    .blog-card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-top: 15px;
+      border: 1px solid #a3bdb2;
+      filter: sepia(0.2) contrast(1.05);
+    }
+
+    .delete-btn {
+      background-color: #5a7869;
+      color: #fffaf0;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+      margin-top: 20px;
+      transition: background-color 0.3s ease;
+    }
+
+    .delete-btn:hover {
+      background-color: #3b5245;
+    }
+
+    nav.navbar {
+      background: #3e5f58;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 30px;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 999;
+      border-bottom: 1px solid #32524c;
+    }
+
+    .logo {
+      height: 65px;
+      max-width: 170px;
+      object-fit: contain;
+    }
+
+    .links-container {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      padding: 0;
+      margin: 0;
+    }
+
+    .link {
+      text-decoration: none;
+      color: #f0f4f3;
+      font-weight: 500;
+      padding: 10px;
+      transition: color 0.2s;
+    }
+
+    .link:hover {
+      color: #cde4db;
+    }
+
+    .link-item {
+      list-style: none;
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <img src="img/logo.png" class="logo" alt="Logo">
+    <ul class="links-container">
+      <li class="link-item"><a href="/" class="link">home</a></li>
+      <li class="link-item"><a href="/editor" class="link">editor</a></li>
+      <li class="link-item"><a href="/admin.html" class="link">admin</a></li>
+    </ul>
+  </nav>
+
+  <div class="admin-dashboard">
+    <h1>Admin Panel</h1>
+    <button id="logout-btn">Logout</button>
+    <div id="blog-list">
+      <!-- Blog cards will appear here -->
+    </div>
+  </div>
+
+  <!-- Firebase Scripts -->
+  <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-auth.js"></script>
+  <script src="js/firebase.js"></script>
+  <script src="js/admin.js"></script>
+</body>
+</html>
