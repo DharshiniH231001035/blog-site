@@ -1,0 +1,170 @@
+/* Banner */
+.banner {
+  width: 100%;
+  height: 400px;
+  position: relative;
+  background: #e7e7e7 url('./img/default-banner.jpg') center/cover no-repeat;
+  transition: background-image 0.3s ease-in-out;
+  border-bottom: 2px solid #cbbeb5;
+  box-shadow: inset 0 0 0 1000px rgba(0,0,0,0.15);
+}
+
+.banner-upload-btn {
+  position: absolute;
+  bottom: 25px;
+  right: 25px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.85);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+.banner-upload-btn:hover {
+  background-color: #f1f1f1;
+}
+.banner-upload-btn img {
+  width: 24px;
+  filter: drop-shadow(0 0 1px rgba(0,0,0,0.2));
+}
+
+/* Blog container */
+.blog {
+  width: 70vw;
+  min-width: 400px;
+  height: auto; /* let it grow with content */
+  margin: auto;
+  padding: 50px 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  color: white; /* good to contrast text on image */
+  position: relative;
+}
+
+
+/* Scrollbar styling for textarea */
+textarea::-webkit-scrollbar {
+  width: 10px;
+}
+textarea::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+}
+
+/* Title */
+.title {
+  width: 100%;
+  min-height: 120px;
+  font-size: 3.2rem; /* 50px ~ 3.2rem for scalability */
+  font-weight: 700;
+  color: #222;
+  border: none;
+  outline: none;
+  resize: none;
+  padding: 16px 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  transition: box-shadow 0.3s ease;
+}
+.title::placeholder {
+  color: #777;
+}
+.title:focus {
+  box-shadow: 0 0 8px #b59f72;
+}
+
+/* Article */
+.article {
+  width: 100%;
+  min-height: 400px;
+  margin-top: 30px;
+  font-size: 1.3rem; /* 20px */
+  line-height: 1.6;
+  font-weight: 500;
+  padding: 18px 20px;
+  resize: vertical;
+  border-radius: 12px;
+  border: none;
+  outline: none;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+  white-space: pre-wrap;
+  transition: box-shadow 0.3s ease;
+}
+.article::placeholder {
+  color: #999;
+}
+.article:focus {
+  box-shadow: 0 0 12px #b59f72;
+}
+
+/* Bottom fixed options bar */
+.blog-options {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  background: #fff;
+  box-shadow: 0 -3px 8px rgba(0,0,0,0.1);
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  gap: 20px;
+}
+
+/* Buttons */
+.btn {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 28px;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, box-shadow 0.2s ease;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+.btn.dark {
+  background-color: #b59f72;
+  color: #fff;
+}
+.btn.dark:hover {
+  background-color: #a08256;
+  box-shadow: 0 4px 12px rgba(160,130,86,0.4);
+}
+.btn.grey {
+  background: #a5a5a5;
+  color: #fff;
+}
+.btn.grey:hover {
+  background: #888;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .blog {
+    width: 90vw;
+    padding: 0 10px;
+  }
+  .title {
+    font-size: 2.2rem;
+    min-height: 90px;
+  }
+  .article {
+    font-size: 1rem;
+    min-height: 300px;
+  }
+  .blog-options {
+    height: 60px;
+  }
+  .btn {
+    padding: 12px 24px;
+    font-size: 0.9rem;
+  }
+}
