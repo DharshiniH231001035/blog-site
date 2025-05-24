@@ -1,6 +1,6 @@
 # Blog Management System
 
-A simple yet powerful blog management system built using **HTML**, **CSS**, and **JavaScript**, with **Firebase Authentication** and **Firestore** for backend services.
+ blog management system built using **HTML**, **CSS**, and **JavaScript**, with **Firebase Authentication** and **Firestore** for backend services.
 
 ## Features
 
@@ -22,6 +22,6 @@ A simple yet powerful blog management system built using **HTML**, **CSS**, and 
   - Delete any blog
   - Secure access control
 
-##  Folder Structure
+
 
 
