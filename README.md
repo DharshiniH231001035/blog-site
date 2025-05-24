@@ -16,7 +16,7 @@
   - All blogs are displayed on the homepage
   - Clean and responsive UI
 
-- 🛠 **Admin Panel**
+-  **Admin Panel**
   - Admin-only access using email verification
   - View all blogs
   - Delete any blog
